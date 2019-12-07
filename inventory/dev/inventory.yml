@@ -1,0 +1,7 @@
+videopoint ansible_host=videopoint-server.helppointit.pl #ansible_python_interpreter=/usr/bin/python3
+
+#[py3hosts]
+#videopoint
+
+#[py3hosts:vars]
+#ansible_python_interpreter=/usr/bin/python3
