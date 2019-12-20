@@ -1,8 +1,10 @@
 --- # Nagłowek naszego Playbooka (zaczyna sie od ---).
 
-- name: INSTALL ON HOST VIDEOPOINT
+- name: INSTALL ON HOST VIDEOPOINT1 UBUNTU # PLAY 1
   hosts: videopoint
   become: yes
+  vars:
+    server_www_ubuntu: apache2
 
   tasks:
   # Install python apt
@@ -18,15 +20,17 @@
   # Install apache
   - name: Install apache2 latest.
     apt:
-      name: apache2
+      name: "{{ input_arg }}"
       state: latest
 
-- name: INSTALL ON HOST VIDEOPOINT
+- name: INSTALL ON HOST VIDEOPOINT2 CENTOS # PLAY 2
   hosts: videopoint2
   become: true
+  vars:
+    server_www_centos: httpd
 
   tasks:
     - name: Install httpd (www server on centos)
       yum:
-        name: httpd
+        name: "{{ server_www_centos }}"
         state: latest
