@@ -1,4 +1,9 @@
-videopoint ansible_host=videopoint-server.helppointit.pl #ansible_python_interpreter=/usr/bin/python3
+videopoint ansible_host=videopoint-server.helppointit.pl #ansible_python_interpreter=/usr/bin/python3 # Ubuntu 16.04
+videopoint2 ansible_host=videopoint-server2.helppointit.pl # CentOS 7
+
+[allhosts]
+videopoint
+videopoint2
 
 #[py3hosts]
 #videopoint

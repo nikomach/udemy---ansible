@@ -1,0 +1,32 @@
+--- # Nagłowek naszego Playbooka (zaczyna sie od ---).
+
+- name: INSTALL ON HOST VIDEOPOINT
+  hosts: videopoint
+  become: yes
+
+  tasks:
+  # Install python apt
+  - name: Install python-apt
+    apt:
+      name: python-apt
+      state: latest
+
+  - name: Install python3-apt
+    apt:
+      name: python3-apt
+      state: latest
+  # Install apache
+  - name: Install apache2 latest.
+    apt:
+      name: apache2
+      state: latest
+
+- name: INSTALL ON HOST VIDEOPOINT
+  hosts: videopoint2
+  become: true
+
+  tasks:
+    - name: Install httpd (www server on centos)
+      yum:
+        name: httpd
+        state: latest
