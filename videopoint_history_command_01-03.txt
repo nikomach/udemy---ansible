@@ -1,0 +1,184 @@
+    1  ssh-keygen -t rsa -b 4096
+    2  cd .ssh
+    3  ls -la
+    4  cat id_rsa
+    5  cat id_rsa.pub 
+    6  wget https://gitlab.com/piotrkoska/fromzerotohero/raw/master/kvm-install-vm-ubuntu.sh
+    7  ./kvm-install-vm-ubuntu.sh videopoint-server 2 2048 /home/$USER/.ssh/id_rsa.pub
+    8  bash ./kvm-install-vm-ubuntu.sh videopoint-server 2 2048 /home/$USER/.ssh/id_rsa.pub
+    9  cd ..
+   10  ls -la
+   11  rm -rf cloudimage/
+   12  exit
+   13  ssh-keygen -t rsa -b 4096
+   14  ssh root@46.41.138.129
+   15  ssh-copy-id -i .ssh/id_rsa.pub root@46.41.138.129
+   16  ssh root@46.41.138.129
+   17  ansible 46.41.138.129 -m ping
+   18  exit
+   19  cd Documents/
+   20  cd videopointansible/
+   21  ls -la
+   22  exit
+   23  cd Documents/
+   24  ls -la
+   25  ssh-keygen -t rsa -b 4096
+   26  cat ../.ssh/id_rsa.pub 
+   27  sudo apt update; sudo apt install git
+   28  git clone git@gitlab.com:helppointit/videopointansible.git
+   29  ls -la
+   30  cd videopointansible/
+   31  ls -la
+   32  cd
+   33  cp /home/piotrkoska/.bashrc ./
+   34  sudo su - videopoint
+   35  exit
+   36  ssh-copy-id -i .ssh/id_rsa.pub root@videopoint-server.helppointit.pl
+   37  exit
+   38  cd Documents/
+   39  cd videopointansible/
+   40  ls -la
+   41  mkdir inventory
+   42  cd inventory/
+   43  mkdir dev
+   44  touch inventory.yml
+   45  vim inventory.yml 
+   46  cd ../..
+   47  cd videopointansible/
+   48  ls -la
+   49  cd inventory/
+   50  ls -la
+   51  mv inventory.yml ./dev/
+   52  cd ..
+   53  ls -la
+   54  ansible -i ./inventory/dev/inventory.yml videopoint-server.helppointit.pl -m ping
+   55  vim ./inventory/dev/inventory.yml 
+   56  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   57  vim ./inventory/dev/inventory.yml 
+   58  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   59  vim ./inventory/dev/inventory.yml 
+   60  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -k
+   61  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   62  vim ./inventory/dev/inventory.yml 
+   63  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   64  vim ./inventory/dev/inventory.yml 
+   65  ansible -i ./inventory/dev/inventory.yml py3-hosts -m ping
+   66  vim ./inventory/dev/inventory.yml 
+   67  ansible -i ./inventory/dev/inventory.yml py3hosts -m ping
+   68  vim ./inventory/dev/inventory.yml 
+   69  ansible -i ./inventory/dev/inventory.yml py3hosts -m ping
+   70  vim ./inventory/dev/inventory.yml 
+   71  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   72  vim ./inventory/dev/inventory.yml 
+   73  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   74  vim ./inventory/dev/inventory.yml 
+   75  ansible -i ./inventory/dev/inventory.yml videopoint -m ping
+   76  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3
+   77  '
+   78  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+   79  git status
+   80  git add .
+   81  git commit -m "chapter 02 - subject 2_5"
+   82  git config --local user.email "helppointit@gmail.com"
+   83  git config --local user.user "Piotr S Koska"
+   84  git commit -m "chapter 02 - subject 2_5"
+   85  git config --local user.name "Piotr S Koska"
+   86  git commit -m "chapter 02 - subject 2_5"
+   87  git push
+   88  exit
+   89  ssh root@videopoint-server.helppointit.pl
+   90  ssh videopoint@videopoint-server.helppointit.pl
+   91  ssh-copy-id -i .ssh/id_rsa.pub videopoint@videopoint-server.helppointit.pl
+   92  ssh videopoint@videopoint-server.helppointit.pl
+   93  exit
+   94  cd Documents/
+   95  cd videopointansible/
+   96  tmux
+   97  vim /home/videopoint/.bashrc 
+   98  cd
+   99  ls -la
+  100  vim .tmux.conf
+  101  tmux
+  102  exit
+  103  cd /etc/ansible/
+  104  ls -la
+  105  vim ansible.cfg 
+  106  vim hosts 
+  107  sudo vim hosts 
+  108  ansible 46.41.138.129 -m ping
+  109  ssh root@46.41.138.129
+  110  ssh viedopoint@46.41.138.129
+  111  sudo vim hosts 
+  112  ansible videopoint-server.helppointit.pl -m ping
+  113  cd
+  114  tmux
+  115  sudo su - videopoint 
+  116  exit
+  117  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  118  ssh root@46.41.139.161
+  119  ssh root@46.41.134.144
+  120  ssh root@46.41.139.161
+  121  cat .ssh/id_rsa.pub 
+  122  exit
+  123  ls -la
+  124  ssh-copy-id -i .ssh/id_rsa.pub videopoint-server.helppointit.pl
+  125  exit
+  126  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  127  man ansible-doc
+  128  ansible-doc lineinfile
+  129  ansible-doc -s lineinfile
+  130  ansible-doc -l
+  131  ssh root@videopoint-server2.helppointit.pl
+  132  ssh root@videopoint-server.helppointit.pl
+  133  ssh root@videopoint-server2.helppointit.pl
+  134  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  135  ansible -i ./inventory/dev/inventory.yml videopoint2 -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  136  ssh videopoint@videopoint-server2.helppointit.pl
+  137  ssh-copy-id -i ~/.ssh/id_rsa.pub videopoint@videopoint-server2.helppointit.pl
+  138  ssh root@videopoint-server2.helppointit.pl
+  139  ssh-copy-id -i ~/.ssh/id_rsa.pub videopoint@videopoint-server2.helppointit.pl
+  140  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  141  ansible -i ./inventory/dev/inventory.yml videopoint2 -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  142  ansible -i ./inventory/dev/inventory.yml videopoint -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  143  ansible -i ./inventory/dev/inventory.yml videopoint2 -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  144  ansible -i ./inventory/dev/inventory.yml allhosts -m ping -e 'ansible_python_interpreter=/usr/bin/python3'
+  145  ansible -i ./inventory/dev/inventory.yml videopoint -m setup -e 'ansible_python_interpreter=/usr/bin/python3'
+  146  ansible -i ./inventory/dev/inventory.yml videopoint -m setup -e 'ansible_python_interpreter=/usr/bin/python3' | less
+  147  ansible -i ./inventory/dev/inventory.yml videopoint -m apt -a "name=apache2 state=latest" -e 'ansible_python_interpreter=/usr/bin/python3'
+  148  ansible -i ./inventory/dev/inventory.yml videopoint -b -m apt -a "name=apache2 state=latest" -e 'ansible_python_interpreter=/usr/bin/python3'
+  149  ansible -i ./inventory/dev/inventory.yml videopoint -b -m apt -a "name=apache2 state=absent" -e 'ansible_python_interpreter=/usr/bin/python3'
+  150  ssh videopoint@videopoint-server1.helppointit.pl
+  151  exit
+  152  ssh videopoint@videopoint-server1.helppointit.pl
+  153  exit
+  154  ssh videopoint@videopoint-server1.helppointit.pl
+  155  exit
+  156  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml 
+  157  git history
+  158  git logs
+  159  git log
+  160  git add .
+  161  gitcommit -m "chapter 03 - subject 3_4"
+  162  git commit -m "chapter 03 - subject 3_4"
+  163  git push
+  164  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml 
+  165  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml -e "input_arg=apache2"
+  166  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml -e "input_arg=vim"
+  167  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml -e "input_arg=htop"
+  168  git log
+  169  git add .
+  170  git commit -m "chapter 03 - subject 3_5"
+  171  ansible videopoint -m setup --tree
+  172  ansible videopoint -m setup --tree videopoint.info
+  173  ansible -i ./inventory/dev/inventory.yml videopoint -m setup --tree videopoint.info
+  174  ls -la
+  175  ansible-playbook -i ./inventory/dev/inventory.yml example-playbook.yml
+  176  ansible -i ./inventory/dev/inventory.yml videopoint -m setup | less
+  177  ansible -i ./inventory/dev/inventory.yml videopoint -m setup -a filter=*ipv4*
+  178  ansible -i ./inventory/dev/inventory.yml allhosts -m setup -a filter=*ipv4*
+  179  ansible -i ./inventory/dev/inventory.yml allhosts -m setup -a filter=*hostname*
+  180  ansible -i ./inventory/dev/inventory.yml allhosts -m setup --tree example_facts
+  181  git log
+  182  git add .
+  183  git commit -m "chapter 03 - subject 3_6"
+  184  history >> videopoint_history_command_01-03.txt
