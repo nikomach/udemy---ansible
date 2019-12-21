@@ -3,10 +3,15 @@
 - name: INSTALL ON HOST VIDEOPOINT1 UBUNTU # PLAY 1
   hosts: videopoint
   become: yes
+  # SETUP MODULE
+  gather_facts: yes # właczone
   vars:
     server_www_ubuntu: apache2
 
   tasks:
+  - debug:
+      msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}"
+
   # Install python apt
   - name: Install python-apt
     apt:
@@ -20,7 +25,7 @@
   # Install apache
   - name: Install apache2 latest.
     apt:
-      name: "{{ input_arg }}"
+      name: "{{ server_www_ubuntu }}"
       state: latest
 
 - name: INSTALL ON HOST VIDEOPOINT2 CENTOS # PLAY 2
@@ -28,8 +33,12 @@
   become: true
   vars:
     server_www_centos: httpd
-
+  gather_facts: no
+  
   tasks:
+    - debug:
+        msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}"
+
     - name: Install httpd (www server on centos)
       yum:
         name: "{{ server_www_centos }}"
