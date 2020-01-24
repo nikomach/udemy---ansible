@@ -1,9 +1,15 @@
 videopoint ansible_user=videopoint ansible_host=videopoint-server.helppointit.pl #ansible_python_interpreter=/usr/bin/python3 # Ubuntu 16.04
 videopoint2 ansible_user=videopoint ansible_host=videopoint-server2.helppointit.pl #ansible_python_interpreter=/usr/bin/python3 # CentOS 7
+localcentos ansible_user=ubuntu ansible_host=192.168.122.107
+localubuntu ansible_user=centos ansible_host=192.168.122.134
 
 [allhosts]
 videopoint
 videopoint2
+
+[pcvm]
+localubuntu
+localcentos
 
 #[py3hosts]
 #videopoint

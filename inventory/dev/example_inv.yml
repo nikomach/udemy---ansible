@@ -1,0 +1,22 @@
+--- # example inventory file with YAML structure
+all:
+  hosts:
+    localubuntu:
+      ansible_user: ubuntu
+      ansible_host: 192.168.122.134
+      ansible_python_interpreter: "/usr/bin/python3"
+    localcentos:
+      ansible_user: centos
+      ansible_host: 192.168.122.107
+      #ansible_python_interpreter: "/usr/bin/python3"
+  children:
+    pcvm:
+      hosts:
+        localubuntu:
+        localcentos:
+    network:
+      hosts:
+        localcentos:
+    sysadmin:
+      hosts:
+        localubuntu:  

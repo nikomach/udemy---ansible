@@ -1,0 +1,13 @@
+--- #
+- hosts: all
+  max_fail_procentage: 10
+  serial: 
+    - 5
+    - "30%"
+    - "50%"
+  become: yes
+  tasks:
+    - name: install elinks
+      package:
+        name: elinks
+        state: latest

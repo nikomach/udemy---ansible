@@ -1,0 +1,7 @@
+--- # 5.17
+- hosts: localubuntu
+  tasks: 
+    - name: Run sleep.sh
+      command: /home/ubuntu/sleep.sh
+      async: 25
+      poll: 0

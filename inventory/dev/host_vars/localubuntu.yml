@@ -1,0 +1,13 @@
+--- # 5.7 Variables YMAL file
+
+working_dir: /home/ubuntu/working_dir
+
+service_list:
+  - httpd
+  - nfs
+  - mariadb
+
+shared_paths:
+  nfs: /mnt/nfs
+  cifs: /mnt/cifs
+  iscsi: /mnt/iscsi

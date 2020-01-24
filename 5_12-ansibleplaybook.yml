@@ -1,0 +1,28 @@
+--- # 5.12
+
+- hosts: localubuntu
+  become: yes
+
+  tasks:
+    - name: install elinks
+      apt: 
+        name: elinks
+        state: latest
+      tags:
+        - software
+
+    - name: Add line to text file
+      lineinfile:
+        path: /home/ubuntu/tag-test.text
+        create: yes
+        line: "Videopoint"
+      tags:
+        - files
+        - config
+
+    - name: Copy tag file
+      copy:
+        src: ~/Documents/videopointansible/config.j2
+        dest: /home/ubuntu/config.text
+      tags:
+        - config

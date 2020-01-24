@@ -1,0 +1,20 @@
+--- # 5.3 ansible playbook - prepare our hosts.
+
+- name: Prepare host with ubuntu system. # This is a label for our PLAY.
+  hosts: localubuntu # host from inventory file.
+
+  tasks:
+  # ^ tasks declaration for host localubuntu
+
+    - name: install python3 and python2 # This is label for TASK
+      raw: sudo apt-get update; sudo apt-get install python2.7 python-pip python3 python3-pip curl -y
+      # ^ we use ubuntu account with sudo privileges.
+
+- name: Prepare hosts with centos system
+  hosts: localcentos
+
+  tasks:
+    
+    - name: install python3 and python2
+      raw: sudo yum install python python-pip python3 python3-pip curl -y
+      # ^ we use centos account with sudo privileges.

@@ -1,0 +1,10 @@
+- hosts: localubuntu
+  vars_files:
+    ~/Documents/videopointansible/example_secret.yml
+  tasks:
+    - name: example
+      lineinfile:
+        path: /home/ubuntu/open.txt
+        create: yes
+        line: "{{ pass }}"
+      no_log: true

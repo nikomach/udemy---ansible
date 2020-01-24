@@ -1,0 +1,16 @@
+--- # handlers example
+- hosts: localcentos
+  become: yes
+  tasks:
+    - name: Install httpd server
+      yum:
+        name: httpd
+        state: latest
+      notify: httpd service
+        
+  handlers:
+    - name: httpd service
+      service:
+        name: httpd
+        state: restarted
+      listen: httpd service

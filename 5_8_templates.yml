@@ -1,0 +1,15 @@
+--- # 5.8 example templates
+
+- hosts: localubuntu
+  gather_facts: no
+  become: yes
+  vars:
+    code_name: whisky
+    version: 4.5
+
+  tasks:
+    - name: deploy configuration file
+      template:
+        src: /home/videopoint/Documents/videopointansible/config.j2
+        dest: /opt/config
+        

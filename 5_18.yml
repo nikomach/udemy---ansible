@@ -1,0 +1,14 @@
+--- # 5.18
+- hosts: localcentos
+  tasks:
+    - name: Run sleep.sh
+      command: /home/ubuntu/sleep.sh
+      async: 60
+      poll: 0
+      delegate_to: localubuntu
+
+    - name: install httpd
+      package: 
+        name: httpd
+        state: latest
+      become: yes

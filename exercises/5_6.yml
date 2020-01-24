@@ -1,0 +1,46 @@
+--- # 5.6
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: edit host file
+      lineinfile:
+        path: /etc/hosts
+        line: "169.168.0.1 ansible.xyzcorp.com"
+    - name: install elinks
+      package:
+        name: elinks
+        state: latest
+    - name: create audit user
+      user:
+        name: audit_user
+        state: present
+    - name: update motd
+      copy:
+        src: ~/Documents/videopointansible/exercises/motd
+        dest: /etc/motd
+    - name: update issue
+      copy:
+        src: ~/Documents/videopointansible/exercises/issue
+        dest: /etc/issue
+
+- hosts: network
+  become: yes
+  tasks:
+    - name: install netcat
+      yum:
+        name: nmap-ncat
+        state: latest
+
+    - name: create network user
+      user:
+        name: networkuser
+        state: present
+
+- hosts: sysadmin
+  become: yes
+  tasks:
+    - name: copy tarball
+      copy: 
+        src: ~/Documents/videopointansible/exercises/scripts.tgz
+        dest: /mnt/storage/
