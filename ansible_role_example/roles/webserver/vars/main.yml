@@ -1,5 +1,7 @@
 --- # main.yml vars
-
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 centos_software:
   - httpd
   - vim

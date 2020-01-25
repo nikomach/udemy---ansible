@@ -1,4 +1,7 @@
 --- # 5.20
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: localcentos
   tasks:
     - name: Run sleep.sh

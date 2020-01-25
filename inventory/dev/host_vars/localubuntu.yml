@@ -1,5 +1,7 @@
 --- # 5.7 Variables YMAL file
-
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 working_dir: /home/ubuntu/working_dir
 
 service_list:

@@ -1,4 +1,7 @@
 --- #
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: all
   max_fail_procentage: 10
   serial: 

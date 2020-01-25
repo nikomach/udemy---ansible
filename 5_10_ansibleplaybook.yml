@@ -1,5 +1,7 @@
 --- # 5.10
-
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: localubuntu
   become: yes
   tasks: 

@@ -1,5 +1,7 @@
 --- # 5.9
-
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: localubuntu
   vars:
     target_file: /home/ubuntu/hostname

@@ -1,4 +1,6 @@
 --- # Nagłowek naszego Playbooka (zaczyna sie od ---).
+    # autor: Piotr Koska
+    # copyright: videopoint
 
 - name: INSTALL ON HOST VIDEOPOINT1 UBUNTU # PLAY 1
   hosts: videopoint

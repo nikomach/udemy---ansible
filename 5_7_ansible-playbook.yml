@@ -1,4 +1,6 @@
 --- # 5.7 Variables in Playbook
+    # autor: Piotr Koska
+    # copyright: videopoint
 
 - hosts: localubuntu
   tasks:

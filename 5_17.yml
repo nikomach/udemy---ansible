@@ -1,4 +1,7 @@
 --- # 5.17
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: localubuntu
   tasks: 
     - name: Run sleep.sh

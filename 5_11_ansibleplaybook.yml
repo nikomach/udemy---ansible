@@ -1,4 +1,7 @@
 --- # handlers example
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - hosts: localcentos
   become: yes
   tasks:

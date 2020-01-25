@@ -1,4 +1,6 @@
 --- # 5.6
+    # autor: Piotr Koska
+    # copyright: videopoint
 
 - hosts: all
   become: yes

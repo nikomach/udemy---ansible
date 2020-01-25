@@ -1,4 +1,6 @@
 --- # 5.3 ansible playbook - prepare our hosts.
+    # autor: Piotr Koska
+    # copyright: videopoint
 
 - name: Prepare host with ubuntu system. # This is a label for our PLAY.
   hosts: localubuntu # host from inventory file.

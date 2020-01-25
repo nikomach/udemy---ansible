@@ -1,4 +1,6 @@
 --- # 5.8 example templates
+    # autor: Piotr Koska
+    # copyright: videopoint
 
 - hosts: localubuntu
   gather_facts: no

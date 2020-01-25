@@ -1,3 +1,6 @@
+    # autor: Piotr Koska
+    # copyright: videopoint
+
     1  ssh-keygen -t rsa -b 4096
     2  cd .ssh
     3  ls -la

@@ -1,5 +1,7 @@
 --- # Main tasks: Ansible kurs videopoint
-
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 - name: Install httpd on centos
   yum:
     name: "{{ centos_software }}"

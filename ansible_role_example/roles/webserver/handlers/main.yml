@@ -1,5 +1,6 @@
 --- # handlers webserwer - ansible kurs videopoint
-
+    # autor: Piotr Koska
+    # copyright: videopoint
 - name: restart httpd
   service: 
     name: httpd

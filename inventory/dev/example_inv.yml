@@ -1,4 +1,7 @@
 --- # example inventory file with YAML structure
+    # autor: Piotr Koska
+    # copyright: videopoint
+    
 all:
   hosts:
     localubuntu:

@@ -1,3 +1,7 @@
+--- # 5.14    
+    # autor: Piotr Koska
+    # copyright: videopoint
+
 - hosts: localubuntu
   vars_files:
     ~/Documents/videopointansible/example_secret.yml
