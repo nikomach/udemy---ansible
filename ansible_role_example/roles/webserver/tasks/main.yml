@@ -1,0 +1,15 @@
+--- # Main tasks: Ansible kurs videopoint
+
+- name: Install httpd on centos
+  yum:
+    name: "{{ centos_software }}"
+    state: latest
+  notify: restart httpd
+  when: ansible_distribution == "CentOS"
+
+- name: Install webserver apache 
+  apt:
+    name: "{{ ubuntu_software }}"
+    state: latest
+  notify: disable apache2
+  when: ansible_distribution == "Ubuntu"

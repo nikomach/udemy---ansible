@@ -1,0 +1,13 @@
+--- # handlers webserwer - ansible kurs videopoint
+
+- name: restart httpd
+  service: 
+    name: httpd
+    state: started
+    enabled: yes
+
+- name: disable apache2
+  service:
+    name: apache2
+    state: stopped
+    enabled: no

@@ -1,0 +1,9 @@
+--- # main.yml vars
+
+centos_software:
+  - httpd
+  - vim
+
+ubuntu_software:
+  - apache2
+  - vim
